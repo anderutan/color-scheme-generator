@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Scheme Generator</title>
+  </head>
+  <body>
+    <header>
+      <form id="color-form">
+        <label for="color-picker"
+          ><input type="color" id="color-picker" class="color-picker"
+        /></label>
+        <label for="color-drop-down-menu"></label>
+        <select name="color-type" id="color-drop-down-menu">
+          <option value="monochrome">monochrome</option>
+          <option value="monochrome-dark">monochrome-dark</option>
+          <option value="monochrome-light">monochrome-light</option>
+          <option value="analogic">analogic</option>
+          <option value="complement">complement</option>
+          <option value="analogic-complement">analogic-complement</option>
+          <option value="triad">triad</option>
+          <option value="quad">quad</option>
+        </select>
+        <button class="btn" id="btn">Get color Scheme</button>
+      </form>
+    </header>
+    <main>
+      <div class="color-column-wrap">
+        <div class="color1-column"></div>
+        <p class="color1-name">Color 1</p>
+      </div>
+      <div class="color-column-wrap">
+        <div class="color2-column"></div>
+        <p class="color2-name">Color 2</p>
+      </div>
+      <div class="color-column-wrap">
+        <div class="color3-column"></div>
+        <p class="color3-name">Color 3</p>
+      </div>
+      <div class="color-column-wrap">
+        <div class="color4-column"></div>
+        <p class="color4-name">Color 4</p>
+      </div>
+      <div class="color-column-wrap">
+        <div class="color5-column"></div>
+        <p class="color5-name">Color 5</p>
+      </div>
+    </main>
+  </body>
+</html>
