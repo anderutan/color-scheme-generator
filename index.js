@@ -1,8 +1,7 @@
 const form = document.querySelector('#color-form');
 const colorPicker = document.querySelector('#color-picker');
 const colorDropDownMenu = document.querySelector('#color-drop-down-menu');
-
-let submissionCount = parseInt(localStorage.getItem('submissionCount'));
+const divColorColumnWrap = document.querySelector('.color-column-wrap');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -72,4 +71,15 @@ function createColorColumn(container, color) {
   divColorColumnWrap.appendChild(para);
 
   container.appendChild(divColorColumnWrap);
+
+  clickToCopy(divColorColumnWrap);
+}
+
+// click on divColorColumnWrap and copy the div id
+function clickToCopy(div) {
+  div.addEventListener('click', (e) => {
+    colorSelect = e.target.parentElement.id;
+    navigator.clipboard.writeText(colorSelect);
+    alert('You copied the color code: ' + colorSelect);
+  });
 }
